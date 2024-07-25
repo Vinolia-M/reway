@@ -4,6 +4,16 @@
 
 body {
   font-family: 'Suez One' !important;
+
+      .login-signup {
+        border: 3px solid transparent;
+        border-radius: 4px;
+        padding: 6px 24px;
+
+      .active {
+        border-color: #00A2FF;
+      }
+    }
 }
 
 
