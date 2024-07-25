@@ -8,13 +8,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'Reway-blue': "#00A2FF",
+        'Reway-darkgrey': "#828282",
+        'ReqayWhite': "rgb(125 125 125)",
+      },
+      backgroundColor: {
+        'bgRewayBlue': '#00A2FF',
+        'bgRewayBlack': '#4A4A4A',
+        'bgRewayGrey': '#EAEAEA',
+      },
+      lineHeight: {
+        '12': '30px',
+      },
+      fontSize: {
+        '20': '20px',
+        '16': '16px',
+      },
+      screens: {
+        'custom': '864px',
       },
     },
   },
   plugins: [],
 };
+
 export default config;
