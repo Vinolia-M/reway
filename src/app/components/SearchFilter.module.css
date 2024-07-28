@@ -1,0 +1,83 @@
+.searchFilter {
+        border-top: 2px solid #00A2FF;
+        border-right: 2px solid #00A2FF;
+        border-bottom: 2px solid #00A2FF;
+        width: 400px;
+        margin-top: 35px;
+  }
+  
+  .header {
+    background-color: #00A2FF;
+    padding: 20px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .filterSection {
+    margin-top: 20px;
+  }
+  
+  .filterItem {
+    padding: 0 25px;
+    display: grid;
+    margin-top: 20px;
+  }
+  
+  .selectedBrands {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #828282;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+  
+  .brand {
+    background-color: #00A2FF;
+    color: #fff;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 2px 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+  }
+
+  .select {
+    background: none;
+    border: 1px solid #828282;
+    color: #828282;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+  
+  .brand svg {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .searchButton {
+    width: 40%;
+    padding: 15px;
+    background-color: #00A2FF;
+    color: #fff;
+    margin: 25px 115px
+  }
+
+  .label {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #828282;
+  }
+  
+  .searchButton svg {
+    margin-right: 10px;
+  }
+  
+  .rangeInput {
+    width: 100%;
+  }
+  

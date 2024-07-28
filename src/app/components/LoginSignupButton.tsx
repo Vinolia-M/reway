@@ -1,42 +1,62 @@
 'use client'
 
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
 
-const LoginSignupButton = () => {
-  const router = useRouter(),
-        [activeButton, setActiveButton] = useState<string | null>(null),
-        handleNavigationClick = (event: React.MouseEvent<HTMLButtonElement>, path: string) => {
-        setActiveButton(path);
-        event.preventDefault();
-        router.push(path);
-      };
+const LoginSignupButton: React.FC = () => {
+  const router = useRouter();
+  const [activeButton, setActiveButton] = useState<string>('/login');
+  const [showPopup, setShowPopup] = useState<string | null>(null);
 
-      useEffect(() => {
-        const signUpButton = document.getElementById('signUpButton');
-        const loginButton = document.getElementById('loginButton');
-    
-        if (signUpButton) {
-          signUpButton.classList.toggle('active', activeButton === '/');
-        }
-        if (loginButton) {
-          loginButton.classList.toggle('active', activeButton === '/login');
-        }
-      }, [activeButton]);
+  const handleNavigationClick = (event: React.MouseEvent<HTMLButtonElement>, path: string) => {
+    event.preventDefault();
+    setActiveButton(path);
+    setShowPopup(path);
+  };
 
-    return(
-        <div>
-            <div className='flex gap-[30px] align-center py-[20px] text-Reway-blue'>
-             <button id='signUpButton' className='login-signup' onClick={(event) => handleNavigationClick(event, '/')}>
-                SIGN UP
-             </button>
-             <button id='loginButton' className='login-signup active' onClick={(event) => handleNavigationClick(event, '/login')}>
-                LOGIN
-             </button>
-            </div>
+  const closePopup = () => {
+    setShowPopup(null);
+  };
+
+  return (
+    <div>
+      <div className='flex gap-[30px] align-center py-[20px] text-Reway-blue text-17'>
+        <button
+          id='signUpButton'
+          className={`${activeButton === '/' ? 'login-signup' : ''}`}
+          onClick={(event) => handleNavigationClick(event, '/')}
+        >
+          SIGN UP
+        </button>
+        <button
+          id='loginButton'
+          className={`${activeButton === '/login' ? 'login-signup' : ''}`}
+          onClick={(event) => handleNavigationClick(event, '/login')}
+        >
+          LOGIN
+        </button>
+      </div>
+
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <button onClick={closePopup} className="popup-close">Close</button>
+            {showPopup === '/' ? (
+              <div>
+                <h2>Sign Up</h2>
+                {/* Sign Up form goes here */}
+              </div>
+            ) : (
+              <div>
+                <h2>Login</h2>
+                {/* Login form goes here */}
+              </div>
+            )}
+          </div>
         </div>
-    );
-
+      )}
+    </div>
+  );
 };
 
 export default LoginSignupButton;

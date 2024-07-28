@@ -20,13 +20,18 @@ const config: Config = {
       },
       lineHeight: {
         '12': '30px',
+        '26': '26px',
       },
       fontSize: {
+        '30': '30px',
         '20': '20px',
         '16': '16px',
+        '17': '17px',
+        '14': '14px',
+        '12': '12px',
       },
-      screens: {
-        'custom': '864px',
+      fontFamily: {
+        sans: ['sans-serif'],
       },
     },
   },
