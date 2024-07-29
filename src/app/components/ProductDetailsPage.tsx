@@ -2,6 +2,8 @@
 
 import React, {useEffect} from 'react';
 import Breadcrumbs from './Breadcrums';
+import ImageGallery from './ImageGallery';
+import AddToCart from './AddToCart';
 
 const ProductDetailsPage: React.FC = () => {
     const breadcrumbItems = [
@@ -18,7 +20,13 @@ const ProductDetailsPage: React.FC = () => {
                   SHOP NOW
                 </button>    
             </div>
+            <div>
             <Breadcrumbs items={breadcrumbItems} />
+            <div className='flex justify-center gap-[50px]'>
+              <ImageGallery />
+              <AddToCart />
+            </div>
+            </div>
         </div>
      );
 };

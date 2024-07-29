@@ -7,7 +7,7 @@ interface BreadcrumbProps {
 
 const Breadcrumbs: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
-    <nav className="text-gray-600 mb-4">
+    <nav className="text-Reway-darkgrey font-sans text-16 mt-[50px] mr-[177px] mb-[15px] ml-[177px]">
       {items.map((item, index) => (
         <span key={index}>
           <Link href={item.href} className={`hover:underline ${item.label === 'Home' || item.label === 'Boots' ? 'text-blue-500' : ''}`}>

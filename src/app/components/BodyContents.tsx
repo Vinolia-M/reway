@@ -9,7 +9,7 @@ const BodyContents: React.FC = () => {
      return(
 
         <div>
-            <div className='flex flex-wrap gap-[50px]'>
+            <div className='flex gap-[50px]'>
              <SearchFilter />
              <ProductDetailsPage />
             </div>
