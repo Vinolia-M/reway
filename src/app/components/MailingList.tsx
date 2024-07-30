@@ -11,7 +11,7 @@ const MailingList: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="bg-bgRewayBlue p-[22px] max-w-md w-full mx-auto ml-[18px] relative">
+      <div className="bg-bgRewayBlue p-[22px] max-w-[60rem] w-full mx-auto ml-[18px] relative">
        <button className="absolute top-0 right-4 text-white text-[35px]">&times;</button>
         <div className="flex justify-center mb-4">
           <Image src={MailImage} width={40} height={34} alt='Mail' />

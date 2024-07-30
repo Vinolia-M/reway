@@ -38,9 +38,9 @@ const LoginSignupButton: React.FC = () => {
       </div>
 
       {showPopup && (
-        <div className="popup-overlay">
-          <div className="popup-content">
-            <button onClick={closePopup} className="popup-close">Close</button>
+        <div className="bg-overlayBg fixed top-0 left-0 w-full h-screen flex justify-center items-center z-10">
+          <div className="popup-content relative p-[20px] bg-white">
+            <button onClick={closePopup} className="absolute top-[10px] right-[10px] text-16 cursor-pointer">Close</button>
             {showPopup === '/' ? (
               <div>
                 <h2>Sign Up</h2>

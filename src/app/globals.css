@@ -5,38 +5,15 @@
 body {
   font-family: 'Suez One' !important;
 
-      .login-signup {
-        border: 3px solid #00A2FF;
-        border-radius: 4px;
-        padding: 6px 24px;
+    .login-signup {
+      border: 3px solid #00A2FF;
+      border-radius: 4px;
+      padding: 6px 24px;
     }
 
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .popup-content {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        position: relative;
-
-        .popup-close {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          font-size: 16px;
-          cursor: pointer;
-        }
+    .popup-content {
+      border-radius: 8px;
       }
-    }
 
     .banner {
       background-image: url('../app/assets/Top-Banner.png');
@@ -44,6 +21,70 @@ body {
       background-size: cover;
       margin-top: 70px;
     }
+    .store {
+      position: relative;
+
+      &::after {
+        content: url(../app//assets/superbalist.svg);
+        position: absolute;
+        left: -20px;
+    }
+    }
+
+    .brown-circ {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 27px;
+        background-color: #91613D;
+        border-radius: 50%;
+        width: 16px;
+        border: 2px solid #000;
+        aspect-ratio: 1/1;
+    }
+    }
+
+    .price {
+      position: relative;
+
+      &::after {
+        content: url(/_next/static/media/discounted-price.94e01272.svg);
+        position: absolute;
+        right: 40px;
+        bottom: 30px;
+    }
+   }
+
+    .shoe-grid {
+      margin: 30px 0px 50px 209px;
+
+      .discount-badge {
+        padding: 0px 15px;
+        border-radius: 3px;
+    }
+
+    .low-stock-badge {
+      font-style: italic;
+      background-color: #0000008a;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    .shoe-details {
+
+      &::after {
+        content: url('../app/assets//superbalist.svg');
+        position: absolute;
+        top: 30px;
+       }
+
+       p {
+        margin: 5px 0;
+    }
+    }
+  }
 }
 
 

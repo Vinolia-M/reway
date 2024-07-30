@@ -1,9 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
+import DiscoutLabelImage from '../assets/discountLabel.svg';
 
 const DiscountLabel: React.FC = () => {
   return (
-    <div className="absolute right-[37.2%] bg-bgRewayBlue text-white text-12 mt-[10px] px-3 py-[3px] rounded z-10">
-      -40% Off
+    <div className="absolute right-[37%] mt-[10px] z-10">
+      <Image src={DiscoutLabelImage} width={80} height={30} alt='Label' />
     </div>
   );
 }; 

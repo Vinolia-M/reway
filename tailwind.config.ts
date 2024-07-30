@@ -17,6 +17,7 @@ const config: Config = {
         'bgRewayBlue': '#00A2FF',
         'bgRewayBlack': '#4A4A4A',
         'bgRewayGrey': '#EAEAEA',
+        'overlayBg': 'rgba(0, 0, 0, 0.5)',
       },
       lineHeight: {
         '12': '30px',

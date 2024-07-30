@@ -32,7 +32,7 @@ const SearchFilter: React.FC = () => {
     <div>
       <div className={styles.searchFilter}>
         <div className={styles.header}>
-          <span className={styles.headerTitle}>SEARCH REWAY</span>
+          <span className={`${styles.headerTitle} pr-4`}>SEARCH REWAY</span>
           <FontAwesomeIcon icon={faSearch} />
         </div>
         <div className={styles.filterSection}>
@@ -111,7 +111,7 @@ const SearchFilter: React.FC = () => {
         src={AdvertBannerImage}
         width={300}
         height={600}
-        style={{ margin: "35px 40px" }}
+        style={{ margin: "35px 74px" }}
         alt="Advert Banner"
       />
       <MailingList />

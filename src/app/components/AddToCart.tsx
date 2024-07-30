@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import styles from "./SearchFilter.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faSearch } from "@fortawesome/free-solid-svg-icons";
+import Image from 'next/image';
+import CartImage from '../assets/cart.svg';
+import DiscoutLabelImage from '../assets/discountLabel.svg';
 
 const DiscountLabel: React.FC = () => {
     const [selectedQuantity, setselectedQuantity] = useState<string>("");
@@ -12,18 +13,18 @@ const DiscountLabel: React.FC = () => {
   return (
 
     <div className="w-[30%]">
-      <div className="w-full border-[5px] border-Reway-blue p-[20px]">
+      <div className="price w-full border-[5px] border-Reway-blue p-[20px]">
         <h4 className='text-20 text-black'>DYLAN HIKER BOOT</h4>
-        <p className='text-12 font-sans text-Reway-darkgrey ml-[20px]'>SUPERBALIST</p>
+        <p className='store text-12 font-sans text-Reway-darkgrey ml-[20px]'>SUPERBALIST</p>
         <div className='flex gap-[30px] text-16 font-sans mt-4 ml-[20px]'>
           <div className='text-Reway-darkgrey'>
            <p>Fabication</p>
            <p>Color</p>
            <p>Brand</p>
           </div>
-          <div className='text-black font-semibold'>
+          <div className='brown-circ text-black font-semibold'>
            <p>Faux Leather</p>
-           <p>Brown</p>
+           <p className='ml-[22px]'>Brown</p>
            <p>Superbalist</p>
           </div>
         </div>
@@ -35,8 +36,8 @@ const DiscountLabel: React.FC = () => {
             <li>Lace-up design</li>
             <li>Rubber sole</li>
         </ul>
-        <div className="bg-bgRewayBlue text-white w-[21%] text-12 mx-auto px-3 py-[3px] rounded">
-         -40% Off
+        <div className="flex justify-center">
+         <Image src={DiscoutLabelImage} width={80} height={30} alt='Label' />
         </div>
       </div>
       <div className={`${styles.filterItem} bg-bgRewayGrey p-[25px!important] font-semibold`}>
@@ -60,8 +61,10 @@ const DiscountLabel: React.FC = () => {
               <option value="Blue">2</option>
               <option value="Green">3</option>
           </select>
-          <button className={`${styles.searchButton} text-20 w-[70%!important] mx-[auto!important] mt-[40px!important]`} onClick={handleSearch}>
-          <FontAwesomeIcon icon={faSearch} /> ADD TO CART
+          <button className={`${styles.searchButton} 
+           flex justify-center gap-[15px] items-center text-20 w-[70%!important] mx-[auto!important] mt-[40px!important]`} 
+           onClick={handleSearch}>
+          <Image src={CartImage} width={30} height={30} alt='Cart'/> ADD TO CART
         </button>
        </div>
     </div>

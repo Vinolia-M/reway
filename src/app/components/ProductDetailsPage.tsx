@@ -4,6 +4,7 @@ import React, {useEffect} from 'react';
 import Breadcrumbs from './Breadcrums';
 import ImageGallery from './ImageGallery';
 import AddToCart from './AddToCart';
+import ShoeGrid from './ShoeGrid';
 
 const ProductDetailsPage: React.FC = () => {
     const breadcrumbItems = [
@@ -27,6 +28,11 @@ const ProductDetailsPage: React.FC = () => {
               <AddToCart />
             </div>
             </div>
+            <div className='flex gap-[10px] justify-center items-center mt-[40px]'>
+              <p className='text-20 text-black'>MORE FROM <span className='text-Reway-blue'>BOOTS</span></p>
+              <div className='h-[2px] w-[55%] bg-bgRewayGrey'></div>
+            </div>
+            <ShoeGrid />
         </div>
      );
 };
