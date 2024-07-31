@@ -19,7 +19,7 @@ const SubNav: React.FC = () => {
     return (
         <div>
             <div className="bg-bgRewayGrey py-[20px] px-[12px]">
-             <main className='flex flex-wrap justify-between items-center mx-16'>
+             <main className='flex flex-wrap justify-between items-center mx-16 justify-content'>
               <p className="text-Reway-darkgrey text-17 pl-20">Adventure is just around the corner!</p>
               <div className="flex items-center gap-[50px]">
               <button

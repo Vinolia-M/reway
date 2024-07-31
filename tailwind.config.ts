@@ -34,6 +34,16 @@ const config: Config = {
       fontFamily: {
         sans: ['sans-serif'],
       },
+      screens: {
+        'custom': '1289px',
+        '991': '991px'
+      },
+      padding: {
+        '13px': '13px',
+      },
+      margin: {
+        '15': '15px'
+      },
     },
   },
   plugins: [],

@@ -12,11 +12,11 @@ const DiscountLabel: React.FC = () => {
       };
   return (
 
-    <div className="w-[30%]">
+    <div className="w-[30%] custom-width">
       <div className="price w-full border-[5px] border-Reway-blue p-[20px]">
         <h4 className='text-20 text-black'>DYLAN HIKER BOOT</h4>
         <p className='store text-12 font-sans text-Reway-darkgrey ml-[20px]'>SUPERBALIST</p>
-        <div className='flex gap-[30px] text-16 font-sans mt-4 ml-[20px]'>
+        <div className='flex gap-[30px] text-14 font-sans mt-4 ml-[20px]'>
           <div className='text-Reway-darkgrey'>
            <p>Fabication</p>
            <p>Color</p>
@@ -62,7 +62,7 @@ const DiscountLabel: React.FC = () => {
               <option value="Green">3</option>
           </select>
           <button className={`${styles.searchButton} 
-           flex justify-center gap-[15px] items-center text-20 w-[70%!important] mx-[auto!important] mt-[40px!important]`} 
+           flex justify-center gap-[15px] items-center text-16 w-[70%!important] mx-[auto!important] mt-[40px!important]`} 
            onClick={handleSearch}>
           <Image src={CartImage} width={30} height={30} alt='Cart'/> ADD TO CART
         </button>

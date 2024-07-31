@@ -108,6 +108,7 @@ const SearchFilter: React.FC = () => {
         </button>
       </div>
       <Image
+        className="banner"
         src={AdvertBannerImage}
         width={300}
         height={600}

@@ -10,7 +10,7 @@ const MailingList: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center 991:mr-15">
       <div className="bg-bgRewayBlue p-[22px] max-w-[60rem] w-full mx-auto ml-[18px] relative">
        <button className="absolute top-0 right-4 text-white text-[35px]">&times;</button>
         <div className="flex justify-center mb-4">

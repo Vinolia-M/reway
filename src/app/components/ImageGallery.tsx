@@ -61,7 +61,7 @@ const ImageGallery: React.FC = () => {
           <Image src={ArrowRightImage} width={20} height={20} alt='Arrow Right'/>
         </button>
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 custom-wrap-gallery">
         {images.map((image, index) => (
           <Image
             key={index}

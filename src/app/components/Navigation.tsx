@@ -12,7 +12,7 @@ const Navigation = () => {
 
     return(
         <main className='mx-16'>
-            <div className='flex flex-wrap justify-between'>
+            <div className='flex flex-wrap justify-between justify-content'>
                 <div className='flex items-center gap-[50px]'>
                   <Image src={LogoImage} width={164} height={45} alt='Logo' />
                   <NavMenu />

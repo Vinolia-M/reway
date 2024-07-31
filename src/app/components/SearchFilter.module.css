@@ -81,3 +81,9 @@
     width: 100%;
   }
   
+  @media screen and (max-width:991px) {
+    .searchFilter {
+      border-left: 2px solid #00A2FF;
+      margin-bottom: 30px;
+}
+  }
