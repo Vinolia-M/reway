@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faSearch } from "@fortawesome/free-solid-svg-icons";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
 import styles from "./SearchFilter.module.css";
 import AdvertBannerImage from "../assets/Advert-Banner.png";
 import MailingList from './MailingList';
@@ -14,18 +12,18 @@ const SearchFilter: React.FC = () => {
     "Mango",
   ]);
   const [selectedColor, setSelectedColor] = useState<string>("");
-  const [priceRange, setPriceRange] = useState<[number, number]>([300, 2000]);
+  const [price, setPrice] = useState<number>(500);
 
   const removeBrand = (brand: string) => {
     setSelectedBrands(selectedBrands.filter((b) => b !== brand));
   };
 
   const handleSearch = () => {
-    console.log({ selectedBrands, selectedColor, priceRange });
+    console.log({ selectedBrands, selectedColor, price });
   };
 
-  const handleSliderChange = (value: [number, number]) => {
-    setPriceRange(value);
+  const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPrice(Number(event.target.value));
   };
 
   return (
@@ -66,40 +64,16 @@ const SearchFilter: React.FC = () => {
           </div>
           <div className={styles.filterItem}>
             <label className={styles.label}>PRICING</label>
-            <Slider
-              range
-              min={300}
-              max={2000}
-              defaultValue={priceRange}
-              onChange={handleSliderChange}
-              trackStyle={{ backgroundColor: "#00A2FF", height: 3 }}
-              handleStyle={[
-                {
-                  borderColor: "#00A2FF",
-                  height: 15,
-                  width: 15,
-                  marginLeft: 15,
-                  marginTop: -6,
-                  backgroundColor: "#00A2FF",
-                },
-                {
-                  borderColor: "#00A2FF",
-                  height: 15,
-                  width: 15,
-                  marginLeft: -15,
-                  marginTop: -6,
-                  backgroundColor: "#00A2FF",
-                },
-              ]}
-              railStyle={{ backgroundColor: "#ccc", height: 3 }}
-            />
-            <div className={styles.priceLabels}>
-              <span className="text-12 text-Reway-darkgrey font-sans">
-                R{priceRange[0]}
-              </span>
-              <span className="text-12 text-Reway-darkgrey font-sans float-right">
-                R{priceRange[1]}
-              </span>
+            <div className={styles.sliderContainer}>
+              <input
+                type="range"
+                className={styles.slider}
+                min={300}
+                max={2000}
+                value={price}
+                onChange={handleSliderChange}
+              />
+              <div className={styles.sliderValue}>R{price}</div>
             </div>
           </div>
         </div>
